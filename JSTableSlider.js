@@ -1,8 +1,8 @@
 	/**
 	 * Skriptas skirtas lentų skirstymui i puslapius pagal horizontale
 	 * Skriptas ieško visose lentose reikiamų data tagų, pagal kuriuos
-	 *  nusprendžia kad lentoms reikia taikyti suspaudimą
-	 * Kiekvienam puslapyje yra tam tikras kiekis stulpelių
+	 *  nusprendžia kad lentoms reikia taikyti suspaudimą.
+	 * Kiekvienam puslapyje yra tam tikras kiekis stulpelių.
 	 * Skriptas prisirisa prie lentų pagal sekancius data tag'us:
 	 * 
 	 * data-table-id turi būtį priligintas unikaliam ID
@@ -34,6 +34,16 @@
 	 * 
 	 * data-count-columns nustato blokų(arba stulpelių) kiekį, kuris bus rodomas vienu metu, kai įjungtas lentos suspaudimas
 	 * 		PVZ data-count-columns = "20"
+	 * 
+	 *  PVZ lentos inicijavimas:
+	 *  	
+	 * 		echo "<table data-table-id = ".$lenteles_id." data-show-columns = '30' 
+	 * 			data-hide-is-on = '0' data-count-columns = ".$count_columns." class='items table table-striped table-condensed'>"; 
+	 * 
+	 * 		Ir į <th> bei <td> tag'us įdedamas data-col-id:
+	 * 
+	 * 		echo "<th  data-col-id = ".$col_counter.">";
+	 * 		echo "<td  data-col-id = ".$col_counter.">";
 	 */
 	$( document ).ready(function() {
 		
